@@ -19,8 +19,8 @@ public class InputHelper {
             System.out.print(prompt);
             data = sc.nextLine();
             try {
-                validator.check(data);   // đa hình: validator có thể là bất kỳ luật nào
-                break;                   // không có exception -> dữ liệu hợp lệ
+                validator.check(data);   
+                break;             
             } catch (Exception e) {
                 System.out.println("-> [Lỗi]: " + e.getMessage());
                 System.out.println("-> Vui lòng thử lại.\n");
