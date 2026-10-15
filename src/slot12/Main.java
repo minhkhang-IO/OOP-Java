@@ -3,7 +3,6 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
  */
 package slot12;
-import lab2.PhoneValidation;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -47,7 +46,7 @@ public class Main {
     private static void addStudent(ArrayList<Student> studentList) {
         System.out.println("\n--- THÊM SINH VIÊN MỚI ---");
 
-        String id = InputHelper.getString("Nhập Mã SV (VD: SV12345): ", input -> {
+        String id = InputHelper.getString("Nhập Mã SV (Ex: SE203117): ", input -> {
             new StudentIdValidation().check(input);
             new UniqueIdValidation(studentList).check(input);
         });

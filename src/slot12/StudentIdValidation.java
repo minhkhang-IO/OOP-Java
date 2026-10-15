@@ -10,10 +10,10 @@ package slot12;
  * @author Minh_Khang
  */
 public class StudentIdValidation implements IValidation{
-      @Override
+        @Override
     public void check(String input) throws Exception {
-        if (!input.matches("^SV\\d{5}$")) {
-            throw new Exception("Mã sinh viên phải có định dạng SE**** (x là số)!");
+        if (input == null || !input.matches("^SE\\d{5,6}$")) {
+            throw new Exception("Mã sinh viên phải có định dạng SExxxxxx (x là số, ví dụ: SE203117)!");
         }
     }
 }
